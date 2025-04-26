@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotoshooting Registrierung</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            max-width: 500px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        input, textarea, select, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Registrierung Fotoshooting</h2>
+    <form action="dein-server-script.php" method="POST">
+        <label for="persons">Anzahl der Personen:</label>
+        <select id="persons" name="persons" required>
+            <option value="">Bitte auswählen</option>
+            <option value="1">1 Person</option>
+            <option value="2">2 Personen</option>
+        </select>
+
+        <label for="name">Name (Hauptperson):</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="second_name">Name (zweite Person, falls vorhanden):</label>
+        <input type="text" id="second_name" name="second_name">
+
+        <label for="email">E-Mail:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Telefonnummer:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="date">Bevorzugtes Datum:</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="style">Shooting-Stil:</label>
+        <select id="style" name="style" required>
+            <option value="">Bitte auswählen</option>
+            <option value="porträt">Porträt</option>
+            <option value="familie">Familie</option>
+            <option value="paarshooting">Paarshooting</option>
+            <option value="event">Event</option>
+            <option value="andere">Andere</option>
+        </select>
+
+        <label for="message">Weitere Wünsche oder Fragen:</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+
+        <button type="submit">Absenden</button>
+    </form>
+</div>
+
+</body>
+</html>
